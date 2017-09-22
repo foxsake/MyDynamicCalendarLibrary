@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        /*
         myCalendar.setCalendarBackgroundColor("#eeeeee");
 //        myCalendar.setCalendarBackgroundColor(R.color.gray);
 
@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
         myCalendar.setEventCellTextColor("#425684");
 //        myCalendar.setEventCellTextColor(R.color.black);
+*/
 
         myCalendar.addEvent("5-10-2016", "8:00", "8:15", "Today Event 1");
         myCalendar.addEvent("05-10-2016", "8:15", "8:30", "Today Event 2");
@@ -122,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
 //        myCalendar.deleteAllEvent();
 
+        /*
         myCalendar.setBelowMonthEventTextColor("#425684");
 //        myCalendar.setBelowMonthEventTextColor(R.color.black);
 
@@ -133,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
 
         myCalendar.setHolidayCellTextColor("#d590bb");
 //        myCalendar.setHolidayCellTextColor(R.color.black);
+*/
 
         myCalendar.setHolidayCellClickable(false);
         myCalendar.addHoliday("2-11-2016");
@@ -301,6 +304,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onLongClick(Date date) {
                 Log.e("date", String.valueOf(date));
+            }
+        });
+
+        myCalendar.setOnEventClickListener(new OnEventClickListener() {
+            @Override
+            public void onClick() {
+                Log.e("showWeekView","from setOnEventClickListener onClick");
+            }
+
+            @Override
+            public void onLongClick() {
+                Log.e("showWeekView","from setOnEventClickListener onLongClick");
+
             }
         });
 
