@@ -629,7 +629,7 @@ public class MyDynamicCalendar extends LinearLayout {
             public void onClick(Date date) {
 
                 eventModelList = new ArrayList<>();
-                eventListAdapter = new EventListAdapter(context, eventModelList, "month");
+                eventListAdapter = new EventListAdapter(context, eventModelList, "month", onEventClickListener);
 
                 LinearLayoutManager layoutManagerForShowEventList = new LinearLayoutManager(context);
                 recyclerView_month_view_below_events.setLayoutManager(layoutManagerForShowEventList);
@@ -951,8 +951,8 @@ public class MyDynamicCalendar extends LinearLayout {
 
                 recyclerView_show_events.setVisibility(VISIBLE);
 
-                eventModelList = new ArrayList<EventModel>();
-                eventListAdapter = new EventListAdapter(context, eventModelList, "month");
+                eventModelList = new ArrayList<>();
+                eventListAdapter = new EventListAdapter(context, eventModelList, "month", onEventClickListener);
 
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context);
                 recyclerView_show_events.setLayoutManager(linearLayoutManager);

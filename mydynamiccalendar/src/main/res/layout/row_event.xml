@@ -3,6 +3,7 @@
     android:id="@+id/ll_parrent"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
     android:orientation="vertical">
 
     <LinearLayout
@@ -46,6 +47,7 @@
             android:textColor="@color/black"
             android:visibility="visible" />
 
+        <!--TODO-->
         <TextView
             android:id="@+id/tv_event_time"
             android:layout_width="wrap_content"
@@ -53,7 +55,7 @@
             android:layout_marginTop="1dp"
             android:text="time"
             android:textColor="@color/black"
-            android:visibility="visible" />
+            android:visibility="gone" />
 
     </LinearLayout>
 

@@ -19,11 +19,13 @@ public class EventListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     private Context context;
     private String strViewFlag;
     private ArrayList<EventModel> eventModelList;
+    private OnEventClickListener listener;
 
-    public EventListAdapter(Context context, ArrayList<EventModel> eventModelList, String strViewFlag) {
+    public EventListAdapter(Context context, ArrayList<EventModel> eventModelList, String strViewFlag, OnEventClickListener listener) {
         this.context = context;
         this.strViewFlag = strViewFlag;
         this.eventModelList = eventModelList;
+        this.listener = listener;
     }
 
     class EventViewHolder extends RecyclerView.ViewHolder {
@@ -97,7 +99,14 @@ public class EventListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
         EventViewHolder showEventsViewHolder = (EventViewHolder) holder;
         showEventsViewHolder.setEvent(eventModel);
-
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(listener != null){
+                    listener.onClick();
+                }
+            }
+        });
     }
 
     @Override

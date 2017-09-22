@@ -34,7 +34,6 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size_small"
                 android:visibility="visible" />
-
         </LinearLayout>
 
         <TextView
@@ -55,7 +54,6 @@
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_small"
             android:visibility="visible" />
-
     </LinearLayout>
 
     <View

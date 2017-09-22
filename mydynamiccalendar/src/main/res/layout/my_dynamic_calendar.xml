@@ -73,6 +73,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:weightSum="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -80,17 +81,15 @@
         <LinearLayout
             android:id="@+id/ll_upper_part"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.8"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
             android:orientation="horizontal">
-
             <LinearLayout
                 android:id="@+id/ll_blank_space"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.9"
                 android:orientation="vertical">
-
             </LinearLayout>
 
             <LinearLayout
@@ -107,9 +106,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:paddingBottom="5dp"
-                    android:paddingTop="5dp">
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/tv_mon"
@@ -186,76 +183,62 @@
                 <ScrollView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="5dp">
-
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
-
                         <LinearLayout
                             android:id="@+id/ll_dates"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
-
                             <android.support.v7.widget.RecyclerView
                                 android:id="@+id/recyclerView_dates"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:isScrollContainer="false"
                                 android:visibility="visible" />
-
                         </LinearLayout>
-
                         <LinearLayout
                             android:id="@+id/ll_month_view_below_events"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
                             android:visibility="gone">
-
                             <android.support.v7.widget.RecyclerView
                                 android:id="@+id/recyclerView_month_view_below_events"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:isScrollContainer="false"
                                 android:visibility="visible" />
-
                         </LinearLayout>
-
                     </LinearLayout>
-
                 </ScrollView>
-
             </LinearLayout>
-
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/ll_lower_part"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.2"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
             android:orientation="horizontal"
             android:visibility="visible">
-
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-
                     <LinearLayout
                         android:id="@+id/ll_hours"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="0.9"
                         android:orientation="vertical">
-
                         <android.support.v7.widget.RecyclerView
                             android:id="@+id/recyclerView_hours"
                             android:layout_width="match_parent"
@@ -263,16 +246,13 @@
                             android:layout_marginTop="5dp"
                             android:isScrollContainer="false"
                             android:visibility="visible" />
-
                     </LinearLayout>
-
                     <LinearLayout
                         android:id="@+id/ll_events"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="0.1"
                         android:orientation="vertical">
-
                         <android.support.v7.widget.RecyclerView
                             android:id="@+id/recyclerView_show_events"
                             android:layout_width="match_parent"
@@ -283,15 +263,10 @@
                             android:layout_marginTop="5dp"
                             android:isScrollContainer="false"
                             android:visibility="gone" />
-
                     </LinearLayout>
-
                 </LinearLayout>
-
             </ScrollView>
-
         </LinearLayout>
-
     </LinearLayout>
 
     <android.support.v4.view.ViewPager
